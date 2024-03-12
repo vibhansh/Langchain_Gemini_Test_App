@@ -1,6 +1,6 @@
 # Chat with Multiple PDFs using Gemini
 
-Here's an documentation with explanation of functions and steps to run the application:
+Here's a documentation with explanations of functions and steps to run the application.
 
 ## Explanation of Functions
 
@@ -71,26 +71,26 @@ This section explains the functionalities of each function within the code:
 * **Parameters:**
     * `user_question (str)`: The user's question about the PDF
 
-
-## Steps for running the Application    
+## Steps for Running the Application    
 
 This section explains the steps for running the code:
 
 ### Getting Started
 
-To run this application, ensure you have the necessary dependencies installed. You can install the required packages using 'pip install -r requirements.txt'
+To run this application, ensure you have the necessary dependencies installed. You can install the required packages using `pip install -r requirements.txt`.
 
-Additionally, you need to set up a Google API key and store it in a .env file. The key is required for accessing the Google Generative AI services. Ensure the .env file is in the same directory as the script, and it should contain the following:  'GOOGLE_API_KEY=your_google_api_key_here'
+Additionally, you need to set up a Google API key and store it in a `.env` file. The key is required for accessing the Google Generative AI services. Ensure the `.env` file is in the same directory as the script, and it should contain the following: `GOOGLE_API_KEY=your_google_api_key_here`.
 
 ### Running the Application
 
-To launch the Gemini application, execute the script gemini.py. This will start a local server, and you can access the application via your web browser. USe the following bash code: 'streamlit run gemini.py'
-
+To launch the Gemini application, execute the script `gemini.py`. This will start a local server, and you can access the application via your web browser. Use the following bash code: `streamlit run gemini.py`.
 
 Once the application is running, follow the steps below:
 
-1* Upload PDF Documents: Use the file uploader to upload one or more PDF documents.
-2*Submit & Process: Click the "Submit & Process" button to extract text from the uploaded PDFs and process them for further interaction.
-3*Ask a Question: Enter your question related to the content of the uploaded PDF files.
-4*View Response: The application will provide a response based on the question asked, utilizing the context from the processed PDFs.
+1. **Upload PDF Documents:** Use the file uploader to upload one or more PDF documents.
+2. **Submit & Process:** Click the "Submit & Process" button to extract text from the uploaded PDFs and process them for further interaction.
+3. **Ask a Question:** Enter your question related to the content of the uploaded PDF files.
+4. **View Response:** The application will provide a response based on the question asked, utilizing the context from the processed PDFs.
 
+### Example Usage
+![alt text](image.png)

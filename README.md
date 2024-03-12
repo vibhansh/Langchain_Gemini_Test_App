@@ -1,6 +1,6 @@
 # Chat with Multiple PDFs using Gemini
-
-Here's a documentation with explanations of functions and steps to run the application.
+This a prototype appllication which takes multiple pdf as input and then answer's questions about the pdf file using Gemini.
+Please find below the documentation with explanations of functions and steps to run the application.
 
 ## Explanation of Functions
 

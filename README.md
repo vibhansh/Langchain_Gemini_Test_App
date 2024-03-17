@@ -1,3 +1,4 @@
+# MyThoughts.AI
 # Chat with Multiple PDFs using Gemini
 This a prototype appllication which takes multiple pdf as input and then answer's questions about the pdf file using Gemini.
 Please find below the documentation with explanations of functions and steps to run the application.
@@ -93,4 +94,4 @@ Once the application is running, follow the steps below:
 4. **View Response:** The application will provide a response based on the question asked, utilizing the context from the processed PDFs.
 
 ### Example Usage
-![alt text](image.png)
+![alt text](V2_Summary.png)

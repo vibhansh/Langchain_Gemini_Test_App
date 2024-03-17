@@ -44,9 +44,7 @@ def get_vector_store(text_chunks):
 def get_conversational_chain():
     """Creates the question-answering chain."""
     prompt_template = """
-    Answer the question as detailed as possible from the provided context, make sure to provide context,
-    make sure to provide all the details, if the answer is not in provided context just say, "answer is not in the context",
-    don't provide the wrong answer\n\n
+    Answer the question as comprehensively as possible based on the provided context. Ensure to include a summary and all pertinent details related to the question. If the answer cannot be derived from the provided context, simply state, "The answer is not in the context," but refrain from providing incorrect information.\n\n
     Context:\n {context}?\n
     Question:\n {question}\n
     
@@ -74,27 +72,29 @@ def user_input(user_question):
 
    
 def main():
-    st.set_page_config("Chat with Multiple PDF")
-    st.header("Chat with your PDF's using Gemini")
-
+    st.set_page_config(page_title="MyThoughts.AI", layout='wide', initial_sidebar_state='auto')
+    st.title("Welcome to [MyThoughts.AI](https://github.com/vibhansh/Langchain_Gemini_Test_App)")
+    st.write("Interact with Berkshire Hathaway's Annual Shareholder Letter",)
+    
     # Empty placeholder for user response
     user_response = st.empty()
 
     # Sidebar for PDF upload and processing
     with st.sidebar:
         st.title("Menu:")
-        pdf_docs = st.file_uploader("Upload your PDF docs and click Submit")
+        pdf_docs = st.file_uploader("Upload your PDF docs and click Submit",accept_multiple_files=True)
 
         if st.button("Submit & Process"):
             with st.spinner("Processing..."):
-                raw_text = get_pdf_text(pdf_docs.getvalue())
-                text_chunks = get_text_chunks(raw_text)
-                get_vector_store(text_chunks)
+                for pdf_file in pdf_docs:
+                    raw_text = get_pdf_text(pdf_file.getvalue())
+                    text_chunks = get_text_chunks(raw_text)
+                    get_vector_store(text_chunks)
                 st.success("Done")
 
 
     # Text input for user question
-    user_question = st.text_input("Ask a Question from the PDF Files")
+    user_question = st.text_input("Ask a Question from the Shareholder Letters")
 
     # Update user response based on user input
     if user_question:

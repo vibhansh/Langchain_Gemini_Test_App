@@ -1,5 +1,5 @@
 # MyThoughts.AI
-# Chat with Multiple PDFs using Gemini
+# Chat with Multiple PDFs using Google Gen AI
 This a prototype appllication which takes multiple pdf as input and then answer's questions about the pdf file using Google Gen AI Chat.
 Please find below the documentation with explanations of functions and steps to run the application.
 
@@ -84,7 +84,7 @@ Additionally, you need to set up a Google API key and store it in a `.env` file.
 
 ### Running the Application
 
-To launch the Gemini application, execute the script `gemini.py`. This will start a local server, and you can access the application via your web browser.
+To launch the Gen AI application, execute the script `app.py`. This will start a local server, and you can access the application via your web browser.
 Use the following bash code: `streamlit run app.py`.
 
 Once the application is running, follow the steps below:
